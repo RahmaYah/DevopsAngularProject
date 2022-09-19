@@ -1,0 +1,6 @@
+projectKey=Angular11Crud
+serverUrl=http://192.168.107.95:9000
+serverVersion=8.9.9.56886
+dashboardUrl=http://192.168.107.95:9000/dashboard?id=Angular11Crud
+ceTaskId=AYL5i0mYt_PJ_A6xp0r6
+ceTaskUrl=http://192.168.107.95:9000/api/ce/task?id=AYL5i0mYt_PJ_A6xp0r6

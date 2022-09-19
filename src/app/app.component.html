@@ -1,0 +1,20 @@
+<div>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">{{title}}</a>
+    <div class="navbar-nav mr-auto">
+
+     <ul>
+      <li class="nav-item">
+        <a routerLink="employees" class="nav-link">Employees</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="add" class="nav-link">Add</a>
+      </li></ul>
+    </div>
+  </nav>
+  <div class="content"><span>Employees Crud app !</span> </div>
+
+  <div class="container mt-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>

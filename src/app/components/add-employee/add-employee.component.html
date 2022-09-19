@@ -1,0 +1,41 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="title">Prenom</label>
+        <input type="text" class="form-control" id="prenom" required [(ngModel)]="employee.prenom" name="prenom" />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Nom</label>
+        <input class="form-control" id="nom" required [(ngModel)]="employee.nom" name="nom" />
+      </div>
+      <div class="form-group">
+        <label for="description">Carte identité</label>
+        <input class="form-control" id="cin" required [(ngModel)]="employee.cin" name="cin" />
+      </div>
+
+
+      <div class="form-group">
+        <label for="description">Age</label>
+        <input class="form-control" id="age" required [(ngModel)]="employee.age" name="age" />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Role</label>
+        <input class="form-control" id="role" required [(ngModel)]="employee.role" name="role" />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Salaire</label>
+        <input class="form-control" id="description" required [(ngModel)]="employee.salaire" name="salaire" />
+      </div>
+      <button (click)="saveEmployee(employee)" class="btn btn-success">Submit</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>employee was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newEmployee()">Add</button>
+    </div>
+  </div>
+</div>

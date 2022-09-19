@@ -1,0 +1,52 @@
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search by nom" [(ngModel)]="nom" />
+      <div class="input-group-append">
+      <!--  <button class="btn btn-outline-secondary" type="button" (click)="searchTitle()">
+          Search
+        </button>-->
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h4>Employees List</h4>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let emp of employees; let i = index" [class.active]="i == currentIndex"
+        (click)="setActiveEmployee(emp, i)">
+        {{ emp.prenom }}
+      </li>
+    </ul>
+
+
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentEmployee">
+      <h4>Employee</h4>
+      <div>
+        <label><strong>Prenom:</strong></label> {{ currentEmployee.prenom }}
+      </div>
+      <div>
+        <label><strong>nom:</strong></label>
+        {{ currentEmployee.nom }}
+      </div>
+      <div>
+        <label><strong>Role:</strong></label>
+        {{ currentEmployee.role }}
+      </div>
+     <!--  <div>
+        <label><strong>Status:</strong></label>
+        {{ currentEmployee.published ? "Published" : "Pending" }}
+      </div>-->
+
+      <a class="badge badge-warning" routerLink="/employees/{{ currentEmployee.id }}">
+        Edit
+      </a>
+    </div>
+
+    <div *ngIf="!currentEmployee">
+      <br />
+      <p>Please click on a Employee...</p>
+    </div>
+  </div>
+</div>
